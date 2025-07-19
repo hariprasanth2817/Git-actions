@@ -2,14 +2,14 @@ name: Deploy Static Site
 on: [push]
 permissions:
   pages: write
-  id-token0: write
+  id-token: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - user: action/configure-pages@v4
-      - user: action/upload-pages-artifact@v3
+      - uses: action/configure-pages@v4
+      - uses: action/upload-pages-artifact@v3
         with:
           path: ./frontend/
-      - user: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
