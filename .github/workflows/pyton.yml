@@ -10,5 +10,5 @@ jobs:
         uses: action/setup-python@v4
         with:
           python-version: '3.11'
-        -name: Run Python Script
+      - name: Run Python Script
         run: Pyhon main.py
